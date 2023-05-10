@@ -1,11 +1,6 @@
 # Image Classification using AWS SageMaker
 
-Use AWS Sagemaker to train a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other good ML engineering practices. This can be done on either the provided dog breed classication data set or one of your choice.
-
-## Project Set Up and Installation
-Enter AWS through the gateway in the course and open SageMaker Studio. 
-Download the starter files.
-Download/Make the dataset available. 
+In this project I have used AWS Sagemaker to finetune a pretrained model that can perform image classification by using the Sagemaker profiling, debugger, hyperparameter tuning and other ML engineering practices. 
 
 ## Dataset
 I have decided to use recommended dataset of dog breeds which can be found [here](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip). I have downloaded the dataset, displayed some sample images and uploaded the data into my own S3 bucket in an appropriate format 
