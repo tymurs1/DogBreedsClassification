@@ -50,7 +50,7 @@ The Profiler rules has been directly added to the estimator constructor as a par
 
 ### Results
 The graph with the training and validation loss change over trainng iterations is below
-![training_and_validation_loss.png](img/training_and_validation_loss.png)
+![training_and_validation_loss.png](img/training_and_validation_loss.jpg)
 
 As per profiler ouput there is an issue with loss not decreasing. I guess the learning rate might be too big. So I could decrease the learning rate next time I run the training job. The initializing part takes far too long - more than 70% of all the time. Actually I am not sure how to fix this one. The GPU has not utilized its the resources efficiently. As suggested I could increase the batch size.
 
