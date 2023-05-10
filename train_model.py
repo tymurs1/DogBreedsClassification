@@ -1,5 +1,3 @@
-#TODO: Import your dependencies.
-#For instance, below are some dependencies you might need if you are using Pytorch
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -19,19 +17,13 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
-#TODO: Import dependencies for Debugging andd Profiling
-
 import smdebug.pytorch as smd
 from smdebug import modes
 from smdebug.profiler.utils import str2bool
 from smdebug.pytorch import get_hook
 
 def test(model, test_loader, device, criterion, hook):
-    '''
-    TODO: Complete this function that can take a model and a 
-          testing data loader and will get the test accuray/loss of the model
-          Remember to include any debugging/profiling hooks that you might need
-    '''
+
     model.eval()
     hook.set_mode(smd.modes.EVAL)
 
@@ -61,11 +53,6 @@ def test(model, test_loader, device, criterion, hook):
             )
 
 def train(model, epochs, train_loader, val_loader, criterion, optimizer, device, hook):
-    '''
-    TODO: Complete this function that can take a model and
-          data loaders for training and will get train the model
-          Remember to include any debugging/profiling hooks that you might need
-    '''
     
     loader = {'train': train_loader, 'val': val_loader}
     batch_factor = {'train': 10, 'val': 2}
@@ -118,10 +105,7 @@ def train(model, epochs, train_loader, val_loader, criterion, optimizer, device,
                         
     
 def net():
-    '''
-    TODO: Complete this function that initializes your model
-          Remember to use a pretrained model
-    '''
+
     model = models.resnet50(pretrained=True)
     for param in model.parameters():
         param.requires_grad = False
@@ -132,12 +116,6 @@ def net():
     
     return model
 
-def create_data_loaders(data, batch_size):
-    '''
-    This is an optional function that you may or may not need to implement
-    depending on whether you need to use data loaders or not
-    '''
-    pass
 
 def main(args):
     ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -189,9 +167,7 @@ def main(args):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
-    '''
-    TODO: Specify all the hyperparameters you need to use to train your model.
-    '''
+
     parser.add_argument(
         "--batch-size",
         type=int,
